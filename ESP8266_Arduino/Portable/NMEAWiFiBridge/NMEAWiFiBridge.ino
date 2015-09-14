@@ -36,7 +36,7 @@ extern "C" {
 }
 
 #define DEBUG
-#define Rev "LGL.00.04"
+#define Rev "LGL.00.05"
 // ERB - Force format stings and string constants into FLASH Memory
     #define sF(x) (String) F(x)                // Used as an F() is being used as the first Element of a Multi-Element Expression
     #define FMT(x) strcpy_P(gFmtBuf, PSTR(x))  // Used with printf() for the format string
@@ -54,7 +54,7 @@ pfodWifiConfig pfodWifiConfig;
 //#define pfodWifiWebConfigAP "WiFiBridge"
 //#define pfodWifiWebConfigPASSWORD "lgl"
 String pfodWifiWebConfigAP = "NMEA WiFi Bridge";
-String pfodWifiWebConfigPASSWORD = "lgl";
+String pfodWifiWebConfigPASSWORD = "nmeawifi";
 
 
 // note pfodSecurity uses 19 bytes of eeprom usually starting from 0 so
