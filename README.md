@@ -27,7 +27,17 @@ There is a status page at the default port on the address on the NMEA WiFi Bridg
 The ESP is programmed in the Arduino IDE for ESP 1.6.5 and the board manager version 1.6.5-947-g39819f0.
 
 Also uses the pfodWebWiFiConfig and adapted schematice from http://www.forward.com.au/pfod/CheapWifiShield/ESP2866_01_WiFi_Shield/ESP8266_01_WiFi_Shield_R1/index.html for the dynamic web config of the ESP.
+/**
+ *  Cheap and Simple Wifi Shield for Arduino and other micros
+ * http://www.forward.com.au/pfod/CheapWifiSheild/index.html
+ *
+ * (c)2015 Forward Computing and Control Pty. Ltd.
+ * This code may be freely used for both private and commerical use.
+ * Provide this copyright is maintained.
+ */
 
 Also borrowed from http://www.scienceprog.com/alternatives-of-max232-in-low-budget-projects/ for the rs-232 to ttl translation for the input pin.
 
 And last but not least some programming concepts from https://github.com/wa0uwh/ERB-EspWebServer.
+
+

@@ -1,7 +1,8 @@
 /*
 
-   Copyright (c) Sept 8-2015. @ Larry Littlefield TCLS.com KB7KMO kb7kmo.blogspot.com
-
+   Copyright (c) Sept 8-2015. @ Larry Littlefield TCLS.com kb7kmo.blogspot.com
+   GPL v2 
+   
    Serial Wifi Bridge
    
    The desired purpose of this program is to take an rs-232 data stream and send it via 
@@ -22,6 +23,15 @@
    And some code and concepts borrowed from a friend, https://github.com/wa0uwh/ERB-EspWebServer
 
 */
+
+ /**
+ *  Cheap and Simple Wifi Shield for Arduino and other micros
+ * http://www.forward.com.au/pfod/CheapWifiSheild/index.html
+ *
+ * (c)2015 Forward Computing and Control Pty. Ltd.
+ * This code may be freely used for both private and commerical use.
+ * Provide this copyright is maintained.
+ */
  
 #include <EEPROM.h>
 #include <ESP8266WiFi.h>
@@ -103,7 +113,7 @@ char gTmpBuf[32+2];  // Generic Temp Buffer
 //*******************************************************************
 //===================================================================
 void setup() {
-  delay(2000); // skip skip the ESP8266 booting debug output
+  delay(2000); // skip the ESP8266 booting debug output
   pinMode(0,OUTPUT); // make GPIO0 an output
   digitalWrite(0,LOW); // make it LOW so it will ground GPIO2 if CONFIG_LINK is shorted out.
   // will turn led on, if any connected
