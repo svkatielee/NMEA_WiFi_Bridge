@@ -2,6 +2,8 @@
 
    Copyright (c) Sept 8-2015. @ Larry Littlefield TCLS.com kb7kmo.blogspot.com
    GPL v2 
+   https://github.com/svkatielee/
+
    
    Serial Wifi Bridge
    
@@ -46,7 +48,7 @@ extern "C" {
 }
 
 #define DEBUG
-#define Rev "LGL.00.05"
+#define Rev "LGL.00.06"
 // ERB - Force format stings and string constants into FLASH Memory
     #define sF(x) (String) F(x)                // Used as an F() is being used as the first Element of a Multi-Element Expression
     #define FMT(x) strcpy_P(gFmtBuf, PSTR(x))  // Used with printf() for the format string
@@ -126,7 +128,7 @@ void setup() {
   Serial.println();
   
 
-pfodWifiConfig.setDebugStream(&Serial); // add this line is using DEBUG in pfodWifiConfig_ESP8266 library code
+pfodWifiConfig.setDebugStream(&Serial); // add this line if using DEBUG in pfodWifiConfig_ESP8266 library code
 
   //============ pfodWifiConfigV1 config in Access Point mode ====================
   // see if config button is pressed
@@ -151,7 +153,7 @@ pfodWifiConfig.setDebugStream(&Serial); // add this line is using DEBUG in pfodW
 //============ end pfodWifiConfigV1 config ====================
 
   // else button was not pressed continue to load the stored network settings
-  // make GPIO0 an input to turn led off when no in config mode, if any is connected
+  // make GPIO0 an input to turn led off when not in config mode, if any is connected
   pinMode(0,INPUT);
 
     // use these local vars
@@ -190,13 +192,21 @@ pfodWifiConfig.setDebugStream(&Serial); // add this line is using DEBUG in pfodW
   Serial.print(password);
   Serial.println("'");
 #endif
+  // Blink LED while trying to connect to WiFi
+  pinMode(0,OUTPUT); // make GPIO0 an output
+  int blink0 = 0;
+  digitalWrite(0,blink0);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
+    blink0 = ! blink0;
+    digitalWrite(0,blink0);
     delay(500);
 #ifdef DEBUG
     Serial.print(".");
 #endif
   }
+  digitalWrite(0, HIGH);  // finished using LED for connecting status
+  pinMode(0,INPUT);
 #ifdef DEBUG
   Serial.println();
   Serial.println(F("Connected!"));
