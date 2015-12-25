@@ -31,6 +31,7 @@ The ESP was programmed with the Arduino IDE for ESP 1.6.5 and the board manager 
 Also uses the pfodWebWiFiConfig and adapted schematic from http://www.forward.com.au/pfod/CheapWifiShield/ESP2866_01_WiFi_Shield/ESP8266_01_WiFi_Shield_R1/index.html for the dynamic web config of the ESP.
 
 You must download the library file, pfodWifiConfig.h , from above and place it in the propper location for the Arduino IDE.
+
 <quote>
 /**
  *  Cheap and Simple Wifi Shield for Arduino and other micros
