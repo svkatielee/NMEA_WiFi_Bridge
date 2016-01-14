@@ -44,9 +44,10 @@ I used the version 1.9 of the library pfodWifiConfig.zip which is now included a
 </quote>
 
 Follow his instructions for setting up the library from above. 
-(Also copied here for the verison I used)
+(Also copied here from http://www.forward.com.au/ for the verison I used)
 
 ---------------------------
+<quote>
 <h4>Programming the WiFi Shield</h4>
 
 The WiFi Shield needs to be programmed once, only, and never again, with the web page configuration and the Serial to WiFi Bridge code.
@@ -61,7 +62,7 @@ a) Download this pfodWifiConfig.zip file to your computer, move it to your deskt
 b) Then use Arduino 1.6.5 IDE menu option Sketch → Import Library → Add Library to install it.<br>
 (If Arduino does not let you install it because the library already exists then find and delete the older pfodWifiConfig folder and then import this one)<br>
 c) Stop and restart the Arduino IDE and under File->Examples you should now see pfodWifiConfig.<br>
-
+</quote>
 ---------------------------
 
 Also borrowed from http://www.scienceprog.com/alternatives-of-max232-in-low-budget-projects/ for the rs-232 to ttl translation for the input pin.
