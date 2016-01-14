@@ -47,7 +47,7 @@ Follow his instructions for setting up the library from above.
 (Also copied here for the verison I used)
 
 ---------------------------
-Programming the WiFi Shield
+<h4>Programming the WiFi Shield</h4>
 
 The WiFi Shield needs to be programmed once, only, and never again, with the web page configuration and the Serial to WiFi Bridge code.
 
@@ -57,10 +57,11 @@ Close and re-open the Arduino IDE and you can now select “Generic ESP8266 Modu
 
 You also need to install the latest version of pfodWifiConfig.zip which handles the storing and retrieval of the settings in EEPROM
 
-a) Download this pfodWifiConfig.zip file to your computer, move it to your desktop or some other folder you can easily find
-b) Then use Arduino 1.6.5 IDE menu option Sketch → Import Library → Add Library to install it.
-(If Arduino does not let you install it because the library already exists then find and delete the older pfodWifiConfig folder and then import this one)
-c) Stop and restart the Arduino IDE and under File->Examples you should now see pfodWifiConfig.
+a) Download this pfodWifiConfig.zip file to your computer, move it to your desktop or some other folder you can easily find<br>
+b) Then use Arduino 1.6.5 IDE menu option Sketch → Import Library → Add Library to install it.<br>
+(If Arduino does not let you install it because the library already exists then find and delete the older pfodWifiConfig folder and then import this one)<br>
+c) Stop and restart the Arduino IDE and under File->Examples you should now see pfodWifiConfig.<br>
+
 ---------------------------
 
 Also borrowed from http://www.scienceprog.com/alternatives-of-max232-in-low-budget-projects/ for the rs-232 to ttl translation for the input pin.
