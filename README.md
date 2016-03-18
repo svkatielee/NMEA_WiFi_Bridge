@@ -29,6 +29,9 @@ To verify it is working, there is a status page on the address on the NMEA WiFi 
 The ESP was programmed with the Arduino IDE for ESP 1.6.5 and the board manager version 1.6.5-947-g39819f0.
 
 Also uses the pfodWebWiFiConfig and adapted schematic from http://www.forward.com.au/pfod/CheapWifiShield/ESP2866_01_WiFi_Shield/ESP8266_01_WiFi_Shield_R1/index.html for the dynamic web config of the ESP.
+
+I used the version 1.9 of the library pfodWifiConfig.zip which is now included as Doc/pfodWifiConfig.zip
+
 <quote>
 /**
  *  Cheap and Simple Wifi Shield for Arduino and other micros
@@ -39,6 +42,28 @@ Also uses the pfodWebWiFiConfig and adapted schematic from http://www.forward.co
  * Provide this copyright is maintained.
  */
 </quote>
+
+Follow his instructions for setting up the library from above. 
+(Also copied here from http://www.forward.com.au/ for the verison I used)
+
+---------------------------
+<quote>
+<h4>Programming the WiFi Shield</h4>
+
+The WiFi Shield needs to be programmed once, only, and never again, with the web page configuration and the Serial to WiFi Bridge code.
+
+To program the shield follow the instructions given on https://github.com/esp8266/Arduino under Installing With Boards Manager. When opening the Boards Manager from the Tools → Board menu and select Type Contributed and install the esp8266 platform. This project was compiled using the ESP8266 version 1.6.4-673-g8cd3697. Later versions well be better but may have their own bugs as the platform is evolving rapidly.
+
+Close and re-open the Arduino IDE and you can now select “Generic ESP8266 Module” from Tools → Board menu.
+
+You also need to install the latest version of pfodWifiConfig.zip which handles the storing and retrieval of the settings in EEPROM
+
+a) Download this pfodWifiConfig.zip file to your computer, move it to your desktop or some other folder you can easily find<br>
+b) Then use Arduino 1.6.5 IDE menu option Sketch → Import Library → Add Library to install it.<br>
+(If Arduino does not let you install it because the library already exists then find and delete the older pfodWifiConfig folder and then import this one)<br>
+c) Stop and restart the Arduino IDE and under File->Examples you should now see pfodWifiConfig.<br>
+</quote>
+---------------------------
 
 Also borrowed from http://www.scienceprog.com/alternatives-of-max232-in-low-budget-projects/ for the rs-232 to ttl translation for the input pin.
 
