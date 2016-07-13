@@ -1,6 +1,8 @@
 # NMEA_WiFi_Bridge
 An ESP8266-01 WiFi module to read NMEA serial data and UDP broadcast it to multiple openCPN instances as a Bridge.
 
+<b>Update: This code has been tested with Arduino IDE rev 1.6.9 and ESP8266 addin of 2.1.0. Newer compilers fail.</b>
+
 <b>Warning: A work in progress</b>
 
 I want to be able to run openCPN on both a laptop and a tablet at the same time. I would like the laptop down below deck, safe from the rain and salt water spray. I would like to have a mostly waterproof tablet in the cockpit to monitor progress. And I would like to be able to quickly check the ship's status from the captain's berth when off watch, maybe on a smart phone.
