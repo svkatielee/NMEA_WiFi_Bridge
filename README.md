@@ -1,5 +1,3 @@
-View this project on [CADLAB.io](https://cadlab.io/node/916). 
-
 # NMEA_WiFi_Bridge
 An ESP8266-01 WiFi module to read NMEA serial data and UDP broadcast it to multiple openCPN instances as a Bridge.
 
